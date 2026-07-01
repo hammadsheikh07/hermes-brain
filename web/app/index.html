@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Brain — Hermes (POC)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Company Brain <span class="tag" id="mode-tag">mock</span></h1>
+    <nav>
+      <button class="tab active" data-view="ask">Ask</button>
+      <button class="tab" data-view="dashboard">Dashboard</button>
+      <button class="tab" data-view="settings">Settings</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Ask -->
+    <section id="ask" class="view active">
+      <form id="ask-form">
+        <input id="q" type="text" autocomplete="off"
+               placeholder="Ask the brain… e.g. What is the remote work policy?" />
+        <button type="submit">Ask</button>
+      </form>
+      <div id="answer" class="answer" hidden></div>
+      <p class="hint">Answers are built from the wiki only and cite their sources. If the brain
+        doesn't know, it says so — it won't guess.</p>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="view">
+      <h2>Index</h2>
+      <pre id="dash-index" class="panel">loading…</pre>
+      <h2>Recent activity (log)</h2>
+      <pre id="dash-log" class="panel">loading…</pre>
+      <h2>Latest lint report</h2>
+      <pre id="dash-lint" class="panel">loading…</pre>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="view">
+      <label>Query API endpoint
+        <input id="s-endpoint" type="url" placeholder="https://your-vps.example.com/query" />
+      </label>
+      <label>Bearer token
+        <input id="s-token" type="password" placeholder="management pilot token" />
+      </label>
+      <label>Repo base URL (optional — makes citations clickable)
+        <input id="s-repo" type="url" placeholder="https://git.example.com/hermes-brain/blob/main" />
+      </label>
+      <label class="row">
+        <input id="s-mock" type="checkbox" />
+        <span>Mock mode (no backend — demo from seed data)</span>
+      </label>
+      <button id="s-save">Save</button>
+      <p class="hint">Stored in your browser (localStorage) — nothing is committed to the repo.
+        The API must verify the token independently; never trust the frontend for auth.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

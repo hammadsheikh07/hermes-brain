@@ -1,24 +1,24 @@
-# web/ — management chat UI (POC)
+# web/ — management chat UI (v2)
 
-The access surface for the management-only pilot. Not built yet — this note fixes the intended
-shape so it can be dropped in without re-litigating decisions.
+**v2 of this project**: a self-hosted **web app** (management chat + interpretation dashboard)
+built on top of the brain. Not a browser extension. Full design & build plan:
+[../docs/web-ui-implementation.md](../docs/web-ui-implementation.md).
 
-## Approach (cheapest working thing first)
-1. **Start** by reusing Hermes' built-in web UI / gateway pointed at the `brain-query` skill. If
-   that's enough for the pilot, you may not need a custom app at all.
-2. **Harden** into a small self-hosted Next.js app on the VPS when you want auth + dashboards:
-   - **Auth**: email-allowlist / SSO restricted to the management pilot group. Keep the whole
-     brain gated behind it (that's our access-control model for v1).
-   - **Chat page**: send the question to the query path → stream a **cited** answer; render
-     `[[slug]]` and `(source: raw/...)` as clickable links into the repo.
-   - **Interpretation dashboard** (the "meaningful interpretations for management" ask):
-     rendered `index.md` (browsable map), recent `log.md` ("what changed this week"), and the
-     latest `lint/` report.
-   - **Host on the VPS** (Docker) — keeps company data on our infra. Vercel is fine later for
-     non-sensitive deployments, but not for the sensitive pilot.
+## What's here
+- `app/` — a dependency-free static web app (HTML + vanilla JS). Runs with **mock mode** so it's
+  demoable with **no backend**, then flips to a live query API when you have one.
 
-## Query path — the one open decision
-How does this UI reach Hermes? Check https://hermes-agent.nousresearch.com/docs/ for an HTTP
-API/webhook. If present, call it. If not, add a thin service (FastAPI/Node) on the VPS that
-shells out to the Hermes CLI or runs the query loop directly against this repo, reusing
-`schema.md` §7. Keep **ingest/lint owned by Hermes** either way. See `../PLAN.md`.
+## Try it now ($0, no backend)
+```bash
+cd web/app && python3 -m http.server 8080     # open http://localhost:8080
+```
+- **Ask** tab → type "what is the remote work policy?" → cited answer from the seed data.
+  Ask "revenue forecast" → honest *"not in the brain yet."*
+- **Dashboard** tab → index / log / lint views (serve from repo root to see index.md & log.md).
+- **Settings** tab → set the query API endpoint + token and untick *Mock mode* to go live.
+
+## Going live
+The app calls the **Query API contract** in
+[../docs/web-ui-implementation.md](../docs/web-ui-implementation.md) §2. Stand that up (a Hermes
+API proxy, or a ~100-line thin wrapper over `bin/query.sh` + the model), gate the app behind
+auth (oauth2-proxy + management allowlist), and serve `app/` over HTTPS on the VPS.

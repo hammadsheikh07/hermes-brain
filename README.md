@@ -7,6 +7,10 @@ following Karpathy's **LLM Wiki** pattern (a compounding markdown wiki instead o
 Status: **proof of concept**, management-only pilot. See [PLAN.md](./PLAN.md) for the full plan
 and the free-resource feasibility analysis (verdict: workable).
 
+**Implementation docs** (build guides, one per half):
+- [docs/brain-implementation.md](./docs/brain-implementation.md) — v1: the brain (wiki + Hermes ingest/query/lint)
+- [docs/web-ui-implementation.md](./docs/web-ui-implementation.md) — v2: the web app (management chat + dashboard)
+
 ## How it works
 
 ```
