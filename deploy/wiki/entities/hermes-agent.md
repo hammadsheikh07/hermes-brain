@@ -3,11 +3,12 @@ title: Hermes Agent
 created: 2026-07-01
 updated: 2026-07-01
 type: entity
-tags: [agent, product, open-source, learning, skills]
+tags: [agent, product, open-source, learning, skills, volatile]
 sources:
   - raw/articles/2026-07-01-hermes-agent-docs.md
   - raw/articles/2026-07-01-hermes-agent-github.md
   - raw/articles/2026-07-01-hermes-agent-overview.md
+  - raw/articles/2026-07-01-hermes-agent-releases.md
 confidence: high
 ---
 
@@ -17,6 +18,10 @@ markets it as "the only agent with a built-in learning loop": it turns experienc
 skills, improves them with use, and builds a model of the user across sessions. It runs on a range
 of backends and reaches users across 20+ chat platforms. (source: raw/articles/2026-07-01-hermes-agent-docs.md)
 
+The GitHub release stream shows Hermes evolving quickly from a multi-platform agent into a broader
+agent platform with desktop, dashboard, gateway, MCP, plugin, skills, and model-routing surfaces.
+See [[release-history]] for the version chronology. (source: raw/articles/2026-07-01-hermes-agent-releases.md)
+
 ## Key facts
 - License **MIT**; Python-based (~82% of the codebase) — (source: raw/articles/2026-07-01-hermes-agent-github.md)
 - Core differentiator: the [[learning-loop]], realized through the [[skills-system]] — (source: raw/articles/2026-07-01-hermes-agent-docs.md)
@@ -24,12 +29,13 @@ of backends and reaches users across 20+ chat platforms. (source: raw/articles/2
 - Model-agnostic; providers switch with `hermes model` — see [[model-providers]] — (source: raw/articles/2026-07-01-hermes-agent-github.md)
 - Reachable on 20+ platforms via one [[messaging-gateway]] — (source: raw/articles/2026-07-01-hermes-agent-docs.md)
 - Also: built-in cron scheduler, isolated subagents for parallel work, MCP support — (source: raw/articles/2026-07-01-hermes-agent-github.md)
-- Latest release at capture: v0.17.0 (v2026.6.19), 2026-06-19 — (source: raw/articles/2026-07-01-hermes-agent-github.md)
+- Latest release at capture: **v0.18.0 (v2026.7.1), "The Judgment Release"**, published 2026-07-01. Its headline was a P0/P1 clean sweep, first-class [[mixture-of-agents]], evidence-based [[verification-and-goals]], `/journey`, background fan-out, desktop Projects, gateway scale-to-zero/drain, Vertex AI, and security hardening. (source: raw/articles/2026-07-01-hermes-agent-releases.md)
 
 ## Relationships
 - Built by [[nous-research]]
 - Implements [[learning-loop]] and [[skills-system]]
 - Deployed via [[deployment-backends]]; powered by [[model-providers]]; accessed via [[messaging-gateway]]
+- Newer releases add [[desktop-app]], [[mixture-of-agents]], and [[verification-and-goals]] as central product surfaces.
 
 ## Open questions
 - Current GitHub star count — sources conflict (~32k in April 2026 vs a much larger figure at the

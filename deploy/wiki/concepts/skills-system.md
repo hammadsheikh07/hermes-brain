@@ -7,6 +7,7 @@ tags: [skills, learning, automation]
 sources:
   - raw/articles/2026-07-01-hermes-learn-skills.md
   - raw/articles/2026-07-01-hermes-agent-docs.md
+  - raw/articles/2026-07-01-hermes-agent-releases.md
 confidence: high
 ---
 
@@ -23,10 +24,16 @@ markdown `SKILL.md` files that the agent creates, improves, and retrieves. The f
   the Skills Hub — (source: raw/articles/2026-07-01-hermes-learn-skills.md)
 - `/learn` (announced 2026-06-23) captures a source into a skill automatically — a directory, docs
   URL, past conversation, or pasted notes — (source: raw/articles/2026-07-01-hermes-learn-skills.md)
+- v0.18.0 release notes frame `/learn <anything>` as a one-command way to distill a reusable skill
+  from a directory, URL, or recently walked-through workflow; it honors `CONTRIBUTING.md` skill
+  standards and mixed requirements. (source: raw/articles/2026-07-01-hermes-agent-releases.md)
+- v0.18.0 also adds `/journey`, a CLI/TUI learning timeline for accumulated memories and skills,
+  and pairs it with the desktop [[learning-loop|memory graph]]. (source: raw/articles/2026-07-01-hermes-agent-releases.md)
 
 ## Related
 - [[hermes-agent]] — owns the skills system
 - [[learning-loop]] — drives skill creation and reuse
+- [[release-history]] — shows Skills Hub and `/learn` milestones
 
 ## Note
 The bundled `llm-wiki` skill that maintains this very wiki is itself a `SKILL.md` under

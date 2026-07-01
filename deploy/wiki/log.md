@@ -24,3 +24,9 @@
 ## [2026-07-01] ingest | Third-party overview (OpenHosst)
 - Source: raw/articles/2026-07-01-hermes-agent-overview.md
 - Updated [[learning-loop]] (five stages) and [[model-providers]] (local Ollama); flagged backend-count discrepancy
+
+## [2026-07-01] ingest | Hermes Agent GitHub releases
+- Source: raw/articles/2026-07-01-hermes-agent-releases.md
+- Captured 19 GitHub releases from https://github.com/NousResearch/Hermes-Agent/releases (v0.2.0 through v0.18.0)
+- Created [[release-history]], [[mixture-of-agents]], [[verification-and-goals]], [[desktop-app]], [[gateway-operations]]
+- Updated [[hermes-agent]], [[model-providers]], [[skills-system]], [[learning-loop]], [[messaging-gateway]], [[deployment-backends]], and index.md
