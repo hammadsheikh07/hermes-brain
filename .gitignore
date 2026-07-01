@@ -1,0 +1,26 @@
+# secrets / env
+.env
+.env.*
+*.key
+hermes/config.local.*
+
+# node / web
+web/node_modules/
+web/.next/
+web/out/
+web/dist/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ingest scratch (raw source staging before review)
+ingest/.staging/
