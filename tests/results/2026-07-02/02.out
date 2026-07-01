@@ -1,0 +1,22 @@
+The configured wiki does not state either figure.
+
+What the wiki does say:
+- Nous Portal is operated by Nous Research and is a recommended “one-account” route to 300+ models.
+- The wiki mentions a “free tier” only generically as something that “can be swapped in via `hermes model`,” but it does not give a rate limit.
+- The only monthly price I found is $2.99/month for third-party OpenHosst managed hosting, not a Nous Portal subscription.
+
+So, using only the wiki:
+- Nous Portal subscription cost per month: not in the wiki.
+- Free-tier rate limit: not in the wiki.
+
+Wiki page file paths used:
+- /root/hermes-brain/deploy/wiki/entities/nous-research.md
+- /root/hermes-brain/deploy/wiki/concepts/model-providers.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-docs.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-github.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-overview.md
+
+real	0m56.037s
+user	0m5.567s
+sys	0m1.936s
+EXIT:0

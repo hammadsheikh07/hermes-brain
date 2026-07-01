@@ -1,0 +1,37 @@
+Using only WIKI_PATH=/root/hermes-brain/deploy/wiki, the wiki supports a detailed description of Hermes Agent, but it contains no pages or mentions for OpenClaw, Open Claw, AutoGPT, Auto-GPT, or Auto GPT. So a factual feature-by-feature comparison is only possible on the Hermes side; the OpenClaw and AutoGPT columns must be “not in wiki.”
+
+Comparison:
+
+| Dimension | Hermes Agent | OpenClaw | AutoGPT |
+|---|---|---|---|
+| Basic identity | Open-source MIT self-improving AI agent built by Nous Research | Not in wiki | Not in wiki |
+| Core differentiator | Built-in learning loop: turns task experience into reusable skills, improves them, and builds a user model across sessions | Not in wiki | Not in wiki |
+| Procedural memory | Uses a skills system: markdown `SKILL.md` files with YAML frontmatter, stored under `~/.hermes/skills/`, with `/learn`, auto-save, hand-written skills, and Skills Hub installation | Not in wiki | Not in wiki |
+| Long-term/context memory | Agent-curated memory, cross-session recall with FTS5 + LLM summarization, and user preference/decision-history modeling | Not in wiki | Not in wiki |
+| Deployment | Runs on 6 backends: local, Docker, SSH, Daytona, Singularity, Modal | Not in wiki | Not in wiki |
+| Model/provider flexibility | Model-agnostic; switch providers with `hermes model`; supports Nous Portal, OpenRouter, OpenAI, custom endpoints, and examples including local Ollama | Not in wiki | Not in wiki |
+| User access / interface | 20+ chat platforms via one messaging gateway, including Telegram, Discord, Slack, WhatsApp, Signal, Email, Microsoft Teams, and CLI | Not in wiki | Not in wiki |
+| Automation / agent orchestration | Wiki says Hermes includes built-in cron scheduler, isolated subagents for parallel work, and MCP support | Not in wiki | Not in wiki |
+
+Bottom line from the wiki:
+
+Hermes Agent is documented in this wiki as a self-improving, persistent agent platform whose main distinction is the learning loop plus skills system: it can convert experience into reusable procedures, refine them, remember user preferences across sessions, run on multiple deployment backends, switch model providers, and connect through many messaging platforms.
+
+The wiki does not contain enough information to compare OpenClaw or AutoGPT on architecture, memory, deployment, licensing, model routing, or user interfaces. Under the wiki’s own guardrail — “Cite or say ‘not in the wiki’” — those details should not be inferred.
+
+Wiki page file paths used:
+
+- /root/hermes-brain/deploy/wiki/SCHEMA.md
+- /root/hermes-brain/deploy/wiki/index.md
+- /root/hermes-brain/deploy/wiki/log.md
+- /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+- /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+- /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+- /root/hermes-brain/deploy/wiki/concepts/deployment-backends.md
+- /root/hermes-brain/deploy/wiki/concepts/model-providers.md
+- /root/hermes-brain/deploy/wiki/concepts/messaging-gateway.md
+
+real	0m53.878s
+user	0m6.028s
+sys	0m2.048s
+EXIT:0

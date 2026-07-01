@@ -1,0 +1,23 @@
+From the configured wiki at /root/hermes-brain/deploy/wiki:
+
+Required SKILL.md sections:
+- description
+- When to Use
+- Procedure
+- Pitfalls
+- Verification
+
+Description length limit:
+- Under 60 characters
+
+/learn announcement date:
+- June 23, 2026
+
+Wiki page file paths used:
+- /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-learn-skills.md
+
+real	0m35.965s
+user	0m5.671s
+sys	0m1.638s
+EXIT:0

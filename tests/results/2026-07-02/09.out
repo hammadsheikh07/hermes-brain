@@ -1,0 +1,72 @@
+Done. I ingested the GitHub releases page into the wiki as a new raw source and updated the affected wiki pages.
+
+Raw source added:
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-releases.md
+
+Pages created:
+- /root/hermes-brain/deploy/wiki/concepts/release-history.md
+- /root/hermes-brain/deploy/wiki/concepts/mixture-of-agents.md
+- /root/hermes-brain/deploy/wiki/concepts/verification-and-goals.md
+- /root/hermes-brain/deploy/wiki/concepts/desktop-app.md
+- /root/hermes-brain/deploy/wiki/concepts/gateway-operations.md
+
+Pages updated:
+- /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+- /root/hermes-brain/deploy/wiki/concepts/model-providers.md
+- /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+- /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+- /root/hermes-brain/deploy/wiki/concepts/messaging-gateway.md
+- /root/hermes-brain/deploy/wiki/concepts/deployment-backends.md
+- /root/hermes-brain/deploy/wiki/index.md
+- /root/hermes-brain/deploy/wiki/log.md
+
+Verification performed:
+- Captured 19 GitHub releases, from v2026.3.12 / v0.2.0 through v2026.7.1 / v0.18.0.
+- Raw source sha256 frontmatter now matches the raw body.
+- Wiki page count is now 12.
+- Broken wikilinks check returned none.
+- index.md lists all 12 pages.
+
+What changed in log.md:
+- Appended a new entry:
+
+  ## [2026-07-01] ingest | Hermes Agent GitHub releases
+
+- The entry records:
+  - Source: raw/articles/2026-07-01-hermes-agent-releases.md
+  - Captured 19 GitHub releases from the releases URL.
+  - Created:
+    - [[release-history]]
+    - [[mixture-of-agents]]
+    - [[verification-and-goals]]
+    - [[desktop-app]]
+    - [[gateway-operations]]
+  - Updated:
+    - [[hermes-agent]]
+    - [[model-providers]]
+    - [[skills-system]]
+    - [[learning-loop]]
+    - [[messaging-gateway]]
+    - [[deployment-backends]]
+    - index.md
+
+What changed in index.md:
+- Total pages changed from 7 to 12.
+- [[hermes-agent]] summary changed from “built-in learning loop” to “release stream now reaches v0.18.0”.
+- Existing concept summaries were expanded for:
+  - [[deployment-backends]]
+  - [[learning-loop]]
+  - [[messaging-gateway]]
+  - [[model-providers]]
+  - [[skills-system]]
+- Added five new concept entries:
+  - [[desktop-app]] — native Electron desktop surface introduced in v0.16 and expanded with Projects/memory graph
+  - [[gateway-operations]] — production gateway features: scale-to-zero, drain coordination, relay, cron/platform reliability
+  - [[mixture-of-agents]] — MoA presets exposed as selectable virtual models with visible reference outputs and streaming aggregation
+  - [[release-history]] — chronology of Hermes Agent GitHub releases from v0.2.0 through v0.18.0
+  - [[verification-and-goals]] — `/goal` completion contracts and coding verification evidence ledger
+
+real	4m22.849s
+user	0m13.532s
+sys	0m8.357s
+EXIT:0

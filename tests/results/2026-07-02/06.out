@@ -1,0 +1,14 @@
+Using only the configured wiki at /root/hermes-brain/deploy/wiki:
+
+- GitHub stars: Not determinable exactly from the wiki. The wiki explicitly flags the star count as volatile/conflicting: one source reported ~32k stars in April 2026, while the 2026-06-19 GitHub snapshot reported star/fork counts “in the hundreds of thousands” but marked them unverified. The wiki says to verify live before quoting, but you asked me not to browse.
+- Current/latest version in the wiki: v0.17.0 (v2026.6.19), captured as the latest release on 2026-06-19.
+
+Cited wiki pages:
+- /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-github.md
+- /root/hermes-brain/deploy/wiki/SCHEMA.md
+
+real	0m36.145s
+user	0m5.906s
+sys	0m1.976s
+EXIT:0

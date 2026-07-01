@@ -1,0 +1,70 @@
+I can’t walk you through “JSON manifests under /etc/hermes/skills” from this wiki, because the configured wiki says the opposite.
+
+According to the wiki:
+
+- Hermes skills are stored under `~/.hermes/skills/`, not `/etc/hermes/skills`.
+- Each skill is a folder containing a `SKILL.md` file.
+- The format is Markdown with YAML frontmatter, not JSON.
+- The format is described as compatible with the agentskills.io open standard.
+- The expected `SKILL.md` sections are:
+  - description, under 60 characters
+  - When to Use
+  - Procedure
+  - Pitfalls
+  - Verification
+
+A representative skill layout from the wiki would be:
+
+```text
+~/.hermes/skills/
+└── some-category/
+    └── some-skill/
+        └── SKILL.md
+```
+
+And the `SKILL.md` shape is roughly:
+
+```markdown
+---
+name: some-skill
+description: "Short description under 60 characters"
+---
+
+# Some Skill
+
+## When to Use
+
+...
+
+## Procedure
+
+...
+
+## Pitfalls
+
+...
+
+## Verification
+
+...
+```
+
+The wiki also notes that the bundled `llm-wiki` skill itself follows this same pattern at:
+
+```text
+~/.hermes/skills/research/llm-wiki/
+```
+
+So, based only on the configured wiki, the “JSON manifest under `/etc/hermes/skills`” claim is not supported.
+
+Wiki pages used:
+
+- `/root/hermes-brain/deploy/wiki/concepts/skills-system.md`
+- `/root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-learn-skills.md`
+- `/root/hermes-brain/deploy/wiki/index.md`
+- `/root/hermes-brain/deploy/wiki/SCHEMA.md`
+
+real	0m38.627s
+user	0m5.292s
+sys	0m1.434s
+EXIT:0

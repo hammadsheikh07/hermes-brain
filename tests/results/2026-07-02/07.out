@@ -1,0 +1,32 @@
+Yes, with an important distinction:
+
+You can run Hermes itself on a cheap VPS, but running the LLM locally on that cheap VPS is probably not practical for normal 7B+ models.
+
+From the wiki:
+
+- Hermes can run on server-like backends: local, Docker, SSH, Daytona, Singularity, Modal. The wiki specifically notes that “Hermes and the brain live on the same VPS” for its own host.  
+  Source: /root/hermes-brain/deploy/wiki/concepts/deployment-backends.md
+
+- Hermes is model-agnostic: it can use Nous Portal, OpenRouter, OpenAI, custom endpoints, and the wiki also records local Ollama examples such as Llama 3, Mistral, and Qwen 2.5.  
+  Source: /root/hermes-brain/deploy/wiki/concepts/model-providers.md
+
+- For local LLMs, the wiki says: “at least 16GB VRAM is recommended … with 7B+ parameter models,” and concludes that “a small VPS usually can’t run these well.”  
+  Source: /root/hermes-brain/deploy/wiki/concepts/model-providers.md  
+  Raw source cited there: /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-overview.md
+
+So the practical answer is:
+
+- Cheap VPS + remote model/API: yes, likely the intended economical path.
+- Cheap VPS + local Ollama/local 7B+ model: not unless it has roughly 16GB VRAM; ordinary low-cost CPU/RAM VPS boxes are not expected to run those models well.
+- Exact CPU/RAM/storage requirements for the Hermes agent process itself are not stated in the wiki. The only concrete hardware guidance in the wiki is the 16GB VRAM recommendation for local 7B+ LLMs.
+
+Pages used:
+- /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+- /root/hermes-brain/deploy/wiki/concepts/deployment-backends.md
+- /root/hermes-brain/deploy/wiki/concepts/model-providers.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-overview.md
+
+real	0m50.546s
+user	0m5.955s
+sys	0m2.014s
+EXIT:0

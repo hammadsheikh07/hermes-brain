@@ -1,0 +1,97 @@
+Using only the configured wiki at WIKI_PATH=/root/hermes-brain/deploy/wiki.
+
+Trace: completed task → reusable knowledge → later-session reuse
+
+1. Hermes completes a task.
+   This is the first stage of the “learning loop”: “task execution.” The wiki describes Hermes as a self-improving agent whose core differentiator is turning experience into reusable skills and a cross-session user model.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+   Cite: /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+
+2. Hermes evaluates the outcome.
+   The next learning-loop stage is “outcome evaluation.” The wiki does not give implementation details for exactly how success/failure is scored, but it explicitly names outcome evaluation as part of the five-stage loop.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+
+3. Hermes extracts procedural knowledge.
+   The third learning-loop stage is “skill extraction.” The extracted knowledge becomes procedural memory in the skills system: named reusable reasoning patterns stored as markdown SKILL.md files.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+   Cite: /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+
+4. Hermes stores that knowledge as a skill.
+   The concrete storage mechanism is the skills system:
+   - skill = folder with SKILL.md
+   - location = ~/.hermes/skills/
+   - format = YAML frontmatter plus sections such as description, When to Use, Procedure, Pitfalls, Verification
+   - compatible with the agentskills.io open standard
+   Cite: /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+
+5. The skill can be created through several mechanisms.
+   The wiki names four creation paths:
+   - hand-written skill
+   - /learn
+   - agent auto-save after solving
+   - install from the Skills Hub
+
+   For the “Hermes completes a task” path specifically, the relevant mechanism is “agent auto-save after solving.” The /learn mechanism can also capture source material such as a directory, docs URL, past conversation, or pasted notes into a skill.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+
+6. Hermes refines the skill.
+   The fourth learning-loop stage is “skill refinement.” The Hermes page also says Hermes “improves [skills] with use,” and the learning-loop page says skills are improved during use.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+   Cite: /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+
+7. Hermes keeps cross-session context separately as memory / user model.
+   In parallel with skills, the learning loop builds a “compounding user model across sessions.” The wiki names:
+   - agent-curated memory
+   - periodic nudges
+   - user modeling
+   - preserved preferences
+   - preserved decision history
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+   Cite: /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+
+8. In a later session, Hermes retrieves relevant knowledge.
+   The fifth learning-loop stage is “skill retrieval.” The skills system uses progressive disclosure: a small skill index loads first, and full skill content loads only when needed. This lets Hermes identify and reuse the relevant SKILL.md without loading everything.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+   Cite: /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+
+9. Hermes can also recall prior-session information.
+   The wiki names “FTS5 cross-session recall with LLM summarization” as a mechanism in the learning loop. That is distinct from skill retrieval: skills are procedural memory, while FTS5 recall + summarization supports cross-session recall of past context.
+   Cite: /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+
+Mechanisms involved, as named in the wiki:
+
+- learning loop
+- task execution
+- outcome evaluation
+- skill extraction
+- skill refinement
+- skill retrieval
+- skills system
+- procedural memory
+- SKILL.md files
+- ~/.hermes/skills/ storage
+- YAML frontmatter skill format
+- /learn
+- agent auto-save after solving
+- hand-written skills
+- Skills Hub install
+- progressive disclosure
+- agent-curated memory
+- periodic nudges
+- user modeling
+- preserved preferences and decision history
+- FTS5 cross-session recall
+- LLM summarization
+
+Pages used:
+
+- /root/hermes-brain/deploy/wiki/entities/hermes-agent.md
+- /root/hermes-brain/deploy/wiki/concepts/learning-loop.md
+- /root/hermes-brain/deploy/wiki/concepts/skills-system.md
+- /root/hermes-brain/deploy/wiki/SCHEMA.md
+- /root/hermes-brain/deploy/wiki/index.md
+
+real	0m53.627s
+user	0m5.769s
+sys	0m2.203s
+EXIT:0

@@ -1,0 +1,24 @@
+Hermes has exactly 6 deployment backends:
+
+1. local
+2. Docker
+3. SSH
+4. Daytona
+5. Singularity
+6. Modal
+
+Sources used:
+- /root/hermes-brain/deploy/wiki/concepts/deployment-backends.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-docs.md
+- /root/hermes-brain/deploy/wiki/raw/articles/2026-07-01-hermes-agent-overview.md
+- /root/hermes-brain/deploy/wiki/index.md
+
+Source disagreement:
+- The official-docs source says 6 backends: local, Docker, SSH, Daytona, Singularity, Modal.
+- The third-party overview says 5 backends: local, Docker, SSH, Singularity, Modal, omitting Daytona.
+- I trust the official-docs-backed wiki page, which explicitly says to trust the docs over the third-party overview.
+
+real	0m34.598s
+user	0m5.197s
+sys	0m1.549s
+EXIT:0
