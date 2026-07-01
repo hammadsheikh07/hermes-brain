@@ -2,15 +2,21 @@
 
 > Catalog of every `wiki/` page, grouped by type. One line each: `[[<slug>]] — summary · sensitivity · updated`.
 > Maintained by the **ingest** and **lint** operations (see [schema.md](./schema.md) §10).
-> The `Acme Co.` entries below are **seed/sample data** — replace with your own on first real ingest.
+> Demo corpus: real, web-sourced knowledge about **Hermes Agent** (the platform this project runs on).
 
 ## Entities
-- [[acme-co]] — the company: SaaS analytics for logistics, ~40 people, Series A · internal · updated 2026-07-01
-- [[engineering-team]] — builds and runs the product; owns the remote-work norms · internal · updated 2026-07-01
+- [[hermes-agent]] — self-improving open-source (MIT) AI agent by Nous Research; built-in learning loop · public · updated 2026-07-01
+- [[nous-research]] — the AI lab that builds Hermes; operates Nous Portal (300+ models) · public · updated 2026-07-01
 
 ## Concepts
-- [[remote-work-policy]] — remote-first; 2 in-office anchor days/quarter; async-by-default · internal · updated 2026-07-01
+- [[learning-loop]] — five-stage loop turning experience into reusable skills + a user model · public · updated 2026-07-01
+- [[skills-system]] — `SKILL.md` procedural memory; `/learn`; agentskills.io-compatible · public · updated 2026-07-01
+- [[deployment-backends]] — 6 backends (local/Docker/SSH/Daytona/Singularity/Modal) + install · public · updated 2026-07-01
+- [[model-providers]] — Nous Portal/OpenRouter/OpenAI/custom + local Ollama; `hermes model` · public · updated 2026-07-01
+- [[messaging-gateway]] — 20+ chat platforms from one gateway · public · updated 2026-07-01
 
 ## Summaries
-- [[acme-company-overview]] — reading notes for the company overview doc · internal · updated 2026-07-01
-- [[acme-remote-work-policy]] — reading notes for the remote-work policy doc · internal · updated 2026-07-01
+- [[hermes-agent-docs]] — notes on the official docs · public · updated 2026-07-01
+- [[hermes-agent-github]] — notes on the GitHub README (features, commands, volatile stats) · public · updated 2026-07-01
+- [[hermes-learn-skills]] — notes on the `/learn` skills feature (MarkTechPost) · public · updated 2026-07-01
+- [[hermes-agent-overview]] — notes on a third-party how-it-works overview · public · updated 2026-07-01

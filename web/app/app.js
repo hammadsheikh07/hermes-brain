@@ -13,29 +13,44 @@ function saveSettings(s) { localStorage.setItem(LS_KEY, JSON.stringify(s)); }
 
 let settings = loadSettings();
 
-/* ---- mock brain (mirrors the seed wiki + the "cite or say you don't know" rule) ---- */
+/* ---- mock brain (mirrors the real Hermes-Agent seed wiki + "cite or say you don't know") ---- */
 const MOCK = [
   {
-    match: /(remote|anchor day|async|work from|policy)/i,
+    match: /(model|provider|ollama|openrouter|openai|nous portal|gpt|claude|gemini|switch)/i,
     answer:
-      "Acme is remote-first (effective 2026-01-01). Employees may work anywhere within ±3 hours " +
-      "of US Central Time, work is async-by-default, and each team meets in person twice per " +
-      "quarter on reimbursed 'anchor days'. Core overlap hours are 10:00–14:00 US Central; " +
-      "non-urgent replies are expected within one business day. Engineering's on-call rotation " +
-      "overrides the response-time rule during incidents.",
+      "Hermes is model-agnostic — you switch providers with `hermes model`, no code changes. " +
+      "Official routes: Nous Portal (recommended, one-account, 300+ models), OpenRouter, OpenAI, " +
+      "or any custom endpoint. Reachable models include Claude, GPT-4, and Gemini, plus local " +
+      "Ollama (Llama 3, Mistral, Qwen 2.5) — though local 7B+ models want >=16GB VRAM, so a small " +
+      "VPS usually can't run them well.",
     citations: [
-      { slug: "remote-work-policy", raw: "raw/2026-07-01-acme-remote-work-policy.md" },
-      { slug: "engineering-team", raw: "raw/2026-07-01-acme-remote-work-policy.md" },
+      { slug: "model-providers", raw: "raw/2026-07-01-hermes-agent-github.md" },
+      { slug: "model-providers", raw: "raw/2026-07-01-hermes-agent-overview.md" },
     ],
   },
   {
-    match: /(what is acme|company|product|pulse|funding|series a|headcount)/i,
+    match: /(deploy|backend|docker|ssh|modal|daytona|singularity|install|vps|self-host|run)/i,
     answer:
-      "Acme Co. is a Series A SaaS company (founded 2022) building analytics for logistics. Its " +
-      "flagship product, Acme Pulse, gives mid-market freight and warehousing operators real-time " +
-      "visibility into delays, cost anomalies, and SLA risk. ~40 people; raised $12M in Q1 2026 " +
-      "led by Northwind Ventures; remote-first.",
-    citations: [{ slug: "acme-co", raw: "raw/2026-07-01-acme-company-overview.md" }],
+      "Hermes runs on 6 backends: local, Docker, SSH, Daytona, Singularity, and Modal. Daytona " +
+      "and Modal hibernate when idle, costing nearly nothing. Install on Linux/macOS/WSL2 with " +
+      "`curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash`, then run `hermes`.",
+    citations: [
+      { slug: "deployment-backends", raw: "raw/2026-07-01-hermes-agent-docs.md" },
+    ],
+  },
+  {
+    match: /(what is hermes|hermes agent|learning loop|skill|memory|nous|learn|self-improv)/i,
+    answer:
+      "Hermes Agent is an open-source (MIT) self-improving AI agent by Nous Research — the only " +
+      "agent with a built-in learning loop: it turns task experience into reusable SKILL.md skills " +
+      "(five stages: execute -> evaluate -> extract -> refine -> retrieve) and builds a model of " +
+      "you across sessions. The /learn command (announced 2026-06-23) captures a directory, URL, " +
+      "or past conversation into a skill automatically.",
+    citations: [
+      { slug: "hermes-agent", raw: "raw/2026-07-01-hermes-agent-docs.md" },
+      { slug: "learning-loop", raw: "raw/2026-07-01-hermes-agent-overview.md" },
+      { slug: "skills-system", raw: "raw/2026-07-01-hermes-learn-skills.md" },
+    ],
   },
 ];
 
@@ -45,7 +60,7 @@ function mockQuery(question) {
   return {
     answer:
       "That's not in the brain yet. Ingest a source that covers this, then ask again. " +
-      "(Mock mode only knows the seed 'Acme Co.' pages.)",
+      "(Mock mode only knows the seed Hermes-Agent pages.)",
     citations: [],
     notInBrain: true,
   };

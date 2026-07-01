@@ -35,7 +35,7 @@ Three operations, all defined in [`schema.md`](./schema.md):
 
 ```bash
 # search the brain the same way Hermes does
-bin/query.sh "remote work"
+bin/query.sh "learning loop"
 
 # run the deterministic health check (orphans, broken [[links]], stale pages)
 bin/lint.sh
@@ -47,7 +47,9 @@ python3 ingest/sync_docs.py /path/to/exported/docs
 Then point Hermes at this repo (see [`hermes/README.md`](./hermes/README.md)) to run the full
 LLM-driven ingest / query / lint.
 
-## Seed content
+## Demo corpus
 
-The `Acme Co.` pages under `wiki/` and the files in `raw/` are **sample data** to validate the
-schema end-to-end. Delete them and ingest your own docs when you're ready.
+The `wiki/` and `raw/` files hold a **real, web-sourced knowledge base about Hermes Agent** (the
+platform this project runs on) — captured 2026-07-01 with citations, so the brain answers real
+questions out of the box (try "what models does Hermes support?" or "how do I deploy Hermes?").
+Replace it with your own docs via `ingest/sync_docs.py` when you're ready.

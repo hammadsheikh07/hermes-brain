@@ -39,7 +39,7 @@ The single integration point. Identical to [brain-implementation.md](./brain-imp
 POST /query          Authorization: Bearer <token>
   → { "question": string, "audience": "management" }
   ← { "answer": string,
-      "citations": [ { "slug": "remote-work-policy", "raw": "raw/2026-07-01-...md" } ],
+      "citations": [ { "slug": "model-providers", "raw": "raw/2026-07-01-hermes-agent-github.md" } ],
       "notInBrain": boolean }
 ```
 
@@ -127,7 +127,7 @@ auditable back to the source — the whole point of the wiki over black-box RAG.
 
 ## 8. Testing / acceptance
 
-- **Mock mode**: ask "remote work" → cited seed answer; ask "revenue forecast" → "not in the brain."
+- **Mock mode**: ask "what models does Hermes support?" → cited seed answer; ask "Hermes enterprise SLA" → "not in the brain."
 - **Live**: same two prompts hit the real API and behave identically (proves the contract).
 - **Auth**: an allowlisted management user gets in; a non-member is blocked at the proxy.
 - **Citations**: every rendered claim shows a source; links resolve when `repoBaseUrl` is set.

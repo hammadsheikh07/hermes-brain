@@ -12,8 +12,8 @@ built on top of the brain. Not a browser extension. Full design & build plan:
 ```bash
 cd web/app && python3 -m http.server 8080     # open http://localhost:8080
 ```
-- **Ask** tab → type "what is the remote work policy?" → cited answer from the seed data.
-  Ask "revenue forecast" → honest *"not in the brain yet."*
+- **Ask** tab → type "what models does Hermes support?" → cited answer from the seed data.
+  Ask "what is Hermes's enterprise SLA?" → honest *"not in the brain yet."*
 - **Dashboard** tab → index / log / lint views (serve from repo root to see index.md & log.md).
 - **Settings** tab → set the query API endpoint + token and untick *Mock mode* to go live.
 

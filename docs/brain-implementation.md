@@ -31,8 +31,8 @@ property is what makes the brain safe to iterate on.
 | Piece | Path | Status |
 |---|---|---|
 | Operating contract | `schema.md` | ✅ written |
-| Seed sources | `raw/2026-07-01-acme-*.md` | ✅ sample data — replace |
-| Seed wiki | `wiki/{entities,concepts,summaries}/` | ✅ 5 pages validating the schema |
+| Sources | `raw/2026-07-01-hermes-*.md` | ✅ 4 real web-sourced captures (Hermes Agent) |
+| Wiki | `wiki/{entities,concepts,summaries}/` | ✅ 11 real, cited pages |
 | Catalog / log | `index.md`, `log.md` | ✅ |
 | Hermes skills | `hermes/skills/brain-{ingest,query,lint}.md` | ✅ prompts written |
 | Free query tool | `bin/query.sh` | ✅ ripgrep retrieval |
@@ -104,7 +104,7 @@ This is the operation the web UI calls. **Query API contract** (shared with the 
 POST /query
   → { "question": string, "audience": "management" }        # auth via Bearer token
   ← { "answer": string,
-      "citations": [ { "slug": "remote-work-policy", "raw": "raw/2026-07-01-...md" } ],
+      "citations": [ { "slug": "model-providers", "raw": "raw/2026-07-01-hermes-agent-github.md" } ],
       "notInBrain": boolean }
 ```
 
@@ -157,7 +157,7 @@ https://hermes-agent.nousresearch.com/docs/.
 
 ## 9. Milestones
 
-1. **M1 — Hermes ingest** works on one real doc; output matches the hand-seeded schema. *(replace seed data here)*
+1. **M1 — Hermes ingest** works on one real doc; output matches the schema. *(the seed corpus is already real Hermes-Agent data — swap in your own docs here)*
 2. **M2 — Query** endpoint live (option A or B) returning the contract JSON; passes the "not in brain" test.
 3. **M3 — Lint** on cron writing reports; a human reviews the first one.
 4. **M4 — Real source connector** (Notion/GDrive → `raw/`) once M1 quality holds.
